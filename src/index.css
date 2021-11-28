@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+.header{
+    background-color: black;
+    margin-bottom: 2vh;
+    color: white;
+    font-size: 5rem;
+}
+.drumMachine{
+    width: 80%;
+    margin: 10% auto 0 auto;
+}
+.pad-Bank{
+    background-color: gray;
+    font-size: 3rem;
+    float: left;
+    display: flex;
+    
+}
+.drum-pad{
+    cursor: pointer;
+    text-align: center;
+}
+.display{
+    float: right;
+}

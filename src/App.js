@@ -5,7 +5,7 @@ function App() {
     <div>
       <Header />
     <div className="drumMachine" id="drum-machine">
-      <div id='display'>
+      <div id='display' className='display'>
         display
       </div>
       <PadBunk class='pad-Bank'/>

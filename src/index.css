@@ -9,19 +9,34 @@ body{
 }
 .drumMachine{
     width: 80%;
-    margin: 10% auto 0 auto;
+    margin: 5% auto 0 auto;
+    background-color: gray;
 }
 .pad-Bank{
-    background-color: gray;
     font-size: 3rem;
-    float: left;
-    display: flex;
-    
+    width: 332px;
+    height: 272px;
+    display: inline-block;
+    margin: 2rem 2rem;
 }
 .drum-pad{
-    cursor: pointer;
     text-align: center;
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 80px;
+    background-color: darkgray;
+    margin: 5px 10px 5px 0;
+    border-radius: 5px;
+    padding-top: 1rem;
+    box-sizing: border-box;
+    box-shadow: black 2px 2px 0 0;
+}
+.drum-pad:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 .display{
-    float: right;
+   background-color: wheat;
+   float: right;
 }

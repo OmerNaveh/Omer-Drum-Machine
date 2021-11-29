@@ -5,6 +5,7 @@ export default function Controls(props){
     const value = useContext(UserContext)
     const volume = useRef(50)
     const [powerDirection , setPowerDirection] = useState('right')
+    const [modeDirection , setmodeDirection] = useState('left')
     const changeVol= ()=>{
         props.setVolume(volume.current.value)
     }
@@ -13,11 +14,16 @@ export default function Controls(props){
         value.setPlayed(String.fromCharCode(0xa0))
         powerDirection==='left'? setPowerDirection('right'): setPowerDirection('left')   
     }
+    const changeMode=()=>{
+        value.setIsMode(!value.isMode)
+        value.setPlayed(String.fromCharCode(0xa0))
+        modeDirection==='left'? setmodeDirection('right'): setmodeDirection('left')   
+    }
     return(
         <div className="controls">
-            <div className='control' onClick={()=>{changePower()}}>
+            <div className='control'>
                 <p>Power</p>
-                <div className='select'>
+                <div className='select' onClick={()=>{changePower()}}>
                     <div className='inner' style={{float:powerDirection}}></div>
                 </div>
             </div>
@@ -30,10 +36,10 @@ export default function Controls(props){
                 {props.played || String.fromCharCode(0xa0)}    
             </div>
 
-            <div className='control'>
+            <div className='control' >
                 <p>Bank</p>
-                <div className='select'>
-                    <div className='inner'></div>
+                <div className='select' onClick={()=>{changeMode()}}>
+                    <div className='inner' style={{float:modeDirection}}></div>
                 </div>
             </div>
         </div>

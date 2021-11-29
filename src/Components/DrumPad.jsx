@@ -13,7 +13,7 @@ export default function DrumPad(props){
         }
     })
     const playSound = ()=>{
-        if(!value.isOn) return
+        if(!value.isOn) return //if power is off
         audio.current.volume = value.volume/100;
         audio.current.play();
         value.setPlayed(props.id);

@@ -6,6 +6,7 @@ body{
     margin-bottom: 2vh;
     color: white;
     font-size: 5rem;
+    text-align: center;
 }
 .drumMachine{
     width: 80%;
@@ -39,4 +40,8 @@ body{
 .display{
    background-color: wheat;
    float: right;
+   margin: 8rem 2rem;
+   width: 8em;
+   text-align: center;
+   font-size: 2em;
 }

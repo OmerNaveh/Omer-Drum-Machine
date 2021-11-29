@@ -13,8 +13,9 @@ export default function DrumPad(props){
         }
     })
     const playSound = ()=>{
-       audio.current.play();
-       value(props.id);
+        audio.current.volume = value.volume/100;
+        audio.current.play();
+        value.setPlayed(props.id);
     }
     return(
         <div onClick={()=>playSound()} className="drum-pad" id={props.id}>

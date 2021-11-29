@@ -10,8 +10,8 @@ export default function PadBunk(props){
             <DrumPad sound = {sounds.clap} text= "A" id="Clap"/>
             <DrumPad sound = {sounds.bass} text= "S" id="Bass"/>
             <DrumPad sound = {sounds.rimshot} text= "D" id="Rim-Shot"/>
-            <DrumPad sound = {sounds.closedHiHat} text= "Z" id="ClosedHiHat"/>
-            <DrumPad sound = {sounds.openHiHat} text= "X" id="OpenHiHat"/>
+            <DrumPad sound = {sounds.closedHiHat} text= "Z" id="Closed-Hi-Hat"/>
+            <DrumPad sound = {sounds.openHiHat} text= "X" id="Open-Hi-Hat"/>
             <DrumPad sound = {sounds.beat} text= "C" id="Floor"/>
         </div>
     )

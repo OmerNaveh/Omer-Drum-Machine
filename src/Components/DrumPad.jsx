@@ -1,10 +1,12 @@
-import { useRef } from "react";
+import{ useContext, useRef } from "react";
+import { UserContext } from "../App";
 
 export default function DrumPad(props){
+    const value = useContext(UserContext)
     const audio = useRef(null)
     document.addEventListener('keydown',(e)=>{
         try{
-            if(e.key === props.text.toLowerCase()){playSound();}
+            if(e.key.toLowerCase() === props.text.toLowerCase()){playSound();}
         }
         catch{
             return
@@ -12,6 +14,7 @@ export default function DrumPad(props){
     })
     const playSound = ()=>{
        audio.current.play();
+       value(props.id);
     }
     return(
         <div onClick={()=>playSound()} className="drum-pad" id={props.id}>

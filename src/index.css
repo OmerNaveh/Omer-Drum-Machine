@@ -12,6 +12,7 @@ body{
     width: 80%;
     margin: 5% auto 0 auto;
     background-color: gray;
+    border: 5px solid orange;
 }
 .pad-Bank{
     font-size: 3rem;
@@ -37,11 +38,35 @@ body{
     cursor: pointer;
     opacity: 0.8;
 }
-.display{
-   background-color: wheat;
+
+.controls{
    float: right;
-   margin: 8rem 2rem;
+   margin: 0 2rem;
    width: 8em;
+   height: 3em;
    text-align: center;
    font-size: 2em;
+}
+.display{
+    background-color: rgb(88, 88, 88);
+}
+.control{
+    width: 100px;
+    margin:  auto;
+}
+.select{
+    margin: auto;
+    border: 1px solid black;
+    width: 50px;
+    height: 20px;
+    padding: 1px;
+    background-color: black;
+}
+.inner{
+    width: 23px;
+    height: 19px;
+    background: rgb(11, 103, 126);
+    border: 1px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
 }

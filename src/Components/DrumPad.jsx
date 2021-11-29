@@ -13,6 +13,7 @@ export default function DrumPad(props){
         }
     })
     const playSound = ()=>{
+        if(!value.isOn) return
         audio.current.volume = value.volume/100;
         audio.current.play();
         value.setPlayed(props.id);

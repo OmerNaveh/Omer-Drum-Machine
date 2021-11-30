@@ -6,13 +6,17 @@ export default function DrumPad(props){
     const audio = useRef(null)
     document.addEventListener('keydown',(e)=>{
         try{
-            if(e.key.toLowerCase() === props.text.toLowerCase()){playSound();}
+            if(e.key.toLowerCase() === props.text.toLowerCase()){
+                document.getElementById(props.id).click() //makes keypress= equal to click on drumpad
+                //  playSound();
+            }
         }
         catch{
             return
         }
     })
     const playSound = ()=>{
+        if(!value.isOn) return //if power is off
         audio.current.volume = value.volume/100;
         audio.current.play();
         value.setPlayed(props.id);
